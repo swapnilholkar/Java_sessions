@@ -21,12 +21,12 @@ public class App {
         //     System.out.println("Failed");
         // }
 //....................................................
-        Exam student =new Exam();
+        // Exam student =new Exam();
         
-        student.name("hello");
-        student.physics(90);;
-        student.chemistry(94);;
-        student.showResults();
+        // student.name("hello");
+        // student.physics(90);;
+        // student.chemistry(94);;
+        // student.showResults();
 //....................................................
 
         // Maths ta = new Maths();
@@ -36,8 +36,47 @@ public class App {
 
 //.................................................... inheritance
 
-            One one = new One();
-            one.mess();
-            one.welcome();
+            // One one = new One();
+            // one.mess();
+            // one.welcome();
+            // one.add(2, 2);
+//.................................................... inheritance with abstract classes we use it to force methonds that must be used
+
+            // HSBCbank account = new HSBCbank();
+            // account.openAccount();
+            // account.showBalance();
+            // account.welcome();
+
+//.................................................... having multiple constructors and how they work
+
+            // Exam school =new Exam();
+            // school.physics(60);
+            // school.chemistry(70);
+            // school.showResults();
+
+            // Exam college =new Exam(150);
+            // college.physics(130);
+            // college.chemistry(70);
+            // college.showResults();
+
+
+// .................................................... static variables and methods work
+
+        // Account hsbc = new Account();
+        // Account jpm = new Account();
+
+        // jpm.setDollar(10);
+        // hsbc.amount(10);
+        // hsbc.setDollar(20);
+        // hsbc.amount(10);
+        // jpm.setDollar(10);
+        // hsbc.setDollar(20);
+        // jpm.amount(10);
+
+// .................................................... for the constructor and how child will execute the constructor of parent first and then the child
+//also the use of super keyword which allows you to call a second constructor from parent and execute the in Two.java
+    Two t = new Two(3);
+
+
     }
 }

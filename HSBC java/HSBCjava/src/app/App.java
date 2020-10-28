@@ -75,8 +75,36 @@ public class App {
 
 // .................................................... for the constructor and how child will execute the constructor of parent first and then the child
 //also the use of super keyword which allows you to call a second constructor from parent and execute the in Two.java
-    Two t = new Two(3);
+    	
+//    Two t = new Two(3);
+    	
 
+    	
+    	
+// .................................................... this is for the exceptions and handlers. The classes used is AbesentException (which is the exception, it should extend Exception) and Accounts
+    	
+//    	Maths m = new Maths();
+//    	m.divide(10,0);
+    	
+    	
+    	Accounts salesAccounts = new Accounts();
+    	Accounts ITAccounts = new Accounts();
+    	
+    	try {
+			salesAccounts.SalarySlip("Swapnil", 2000, 3);
+		} catch (AbsentException e) {
+			System.out.println("toO many lates");
+		}
+    	
+    	try {
+			ITAccounts.SalarySlip("Shafeeq", 3000, 2);
+		} catch (AbsentException e) {
+			System.out.println("This is okay for the IT");
+			// TODO: handle exception
+		}
+    			
+    	
+    	
 
     }
 }

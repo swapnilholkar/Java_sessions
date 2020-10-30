@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mouse task</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+
+    <input id="valueInput" value="0" onmouseenter="initilize()"><br>
+    <input id="incB" type="button" value="increment" onmousemove="increment()">
+    <input id="decB" type="button" value="decrement" onmousemove="decrement()"><br>
+
+</body>
+
+
+<script>
+
+    let numInput = window.document.getElementById("valueInput");
+    // let data = parseInt(numInput.value)
+    
+    function increment(){
+        let data = parseInt(numInput.value);
+        data++;
+        numInput.value=data;
+    }
+
+    function decrement(){
+        let data = parseInt(numInput.value);
+        data--;
+        numInput.value=data;
+    }
+
+    function initilize(){
+        numInput.value=0;
+    }
+
+</script>
+</html>

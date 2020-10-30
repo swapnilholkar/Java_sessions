@@ -1,0 +1,40 @@
+<html>
+
+<script>
+    let result=true;
+
+    function hide(ref){
+        document.getElementById(ref).style.visibility='hidden';
+    }
+
+    function check(){
+        if(document.getElementById("A").value==""){
+            document.getElementById("errorName").style.visibility='visible';
+            result=false;
+        }
+        if(document.getElementById("B").value==""){
+            document.getElementById("errorEmail").style.visibility='visible';
+            result=false;
+        }
+        if(document.getElementById("C").value==""){
+            document.getElementById("errorAddress").style.visibility='visible';
+            result=false;
+        }
+        return result;
+    }
+
+</script>
+
+<form action="www.bbc.co.uk" method="POST" onsubmit="return check()">
+
+    name:<input id="A" onkeydown="hide('errorName')"> <span id="errorName"  style="color:red;visibility:hidden"> **</span></input><br>
+    email:<input id="B" onkeydown="hide('errorEmail')"> <span id="errorEmail" style="color:red;visibility:hidden"> **</span></input><br>
+    address:<input id="C" onkeydown="hide('errorAddress')"> <span id="errorAddress" style="color:red;visibility:hidden"> **</span></input><br>
+    <input type="submit">
+
+</form>
+
+
+
+
+</html>

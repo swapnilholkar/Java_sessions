@@ -1,7 +1,7 @@
 <html>
-    
-<center> <h1>Welcome to QA Limited</h1></center>
-    <br>
+<!--     
+<center> <h1>Welcome to QA Limited</h1></center> -->
+    <!-- <br>
 
     <a href="http://www.bbc.co.uk"> BBC</a>
     <a href="http://www.cnn.com"> CNN</a>
@@ -17,7 +17,54 @@
     <br>
 
 
-    <font color="blue" size='20'> Swapnil </font>
+    <font color="blue" size='20'> Swapnil </font> -->
+
+    <h1>Calculate values</h1><br>
+
+    Number 1: <input id="N1"><br>
+    Number 2: <input id="N2"><br>
+
+    <input id="addB" type="button" value="Addition +" onclick="addValues()"><br>
+    <input id="subB" type="button" value="Substract -" onclick="subValues()"><br>
+    <input id="multB" type="button" value="Multiple x" onclick="multiplyValues()"><br>
+    <input id="divB" type="button" value="Division /" onclick="divisionValues()"><br>
+
+
+    Result: <input id="result" type="text">
+
+
+    <script>
+            let num1 = window.document.getElementById("N1");
+            let num2 = window.document.getElementById("N2");
+            let res = window.document.getElementById("result");
+            
+            function addValues(){
+
+                if (num1.value==""){
+                    alert("Enter the first number");
+                    num1.focus(); //cursor will auto go to the first number field    
+                }else if (num2.value==""){
+                    alert("Enter the second number");
+                    num2.focus();
+                }else{
+                    res.value= parseInt(num1.value) + parseInt(num2.value); 
+                }
+
+                
+            }
+    
+            function subValues(){
+                res.value= parseInt(num1.value) - parseInt(num2.value);
+            }
+    
+            function multiplyValues(){   
+                res.value= parseFloat(num1.value) * parseFloat(num2.value);
+            }
+    
+            function divisionValues(){   
+                res.value= parseInt(num1.value) / parseInt(num2.value);
+            }
+        </script>
 
 
 </html>

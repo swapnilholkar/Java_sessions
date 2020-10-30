@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <title>Page Title</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script> -->
+</head>
+
+
+<body onmousemove="moveL()">
+
+    <input type="text" id="t" onmouseleave="clickit()">
+
+    <span id="A" style="position:absolute;top:30pt;left:40pt">Swapnil</span>
+
+
+</body>
+
+
+<script>
+        let fs=10; //font size
+        let ele =window.document.getElementById("A");
+        function moveL(){
+            if(window.event.ctrlKey==true){
+                fs++;
+            }
+            if(window.event.altKey==true){
+                fs--;
+            }
+    
+            ele.style.fontSize=fs;
+            ele.style.top= window.event.clientY;
+            ele.style.left= window.event.clientX;
+
+
+            console.log(ele.style.top);
+            console.log(ele.style.left);
+
+        }
+
+        function clickit(){
+            ele.innerHTML=window.document.getElementById("t").value;
+        }
+    
+    </script>
+
+
+</html>

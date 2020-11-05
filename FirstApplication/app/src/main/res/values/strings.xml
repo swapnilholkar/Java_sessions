@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FirstApplication</string>
+    <string name="randomBtn">Hello</string>
+    <string name="menu_item_add">Add</string>
+    <string name="menu_item_remove">Remove</string>
+
+</resources>
